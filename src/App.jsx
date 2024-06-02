@@ -100,18 +100,18 @@ function App() {
           </div>
           <div className='md:w-2/3 w-full p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
             <h2 className='text-xl font-bold text-gray-50'>Top Source Ports</h2>
-            <Heatmap data={heatmapDataSourcePort} xKey="sourcePort" yKey="count" />
+            <Heatmap data={heatmapDataSourcePort} xKey="sourcePort" yKey="count" valueX="Port number" valueY="Count" />
           </div>
         </div>
 
         <div className='flex md:flex-row mb-4 w-full flex-1 gap-2 flex-col item-center'>
           <div className='md:w-2/3 w-full p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
             <h2 className='text-xl font-bold text-gray-50'>Top Destination IPs</h2>
-            <HistogramComponent data={histogramDataSourceIP} dataKey="sourceIP" barKey="count" value="IP address" />
+            <HistogramComponent data={histogramDataSourceIP} dataKey="sourceIP" barKey="count" valueX="Count" valueY="IP address" />
           </div>
           <div className='md:w-1/3 w-full p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
             <h2 className='text-xl font-bold text-gray-50 justify-item-center'>Top Source IPs</h2>
-            <HistogramComponent data={histogramDataDestIP} dataKey="destIP" barKey="count" value="IP address" />
+            <HistogramComponent data={histogramDataDestIP} dataKey="destIP" barKey="count" valueX="Count" valueY="IP address" />
           </div>
         </div>
 
@@ -122,7 +122,7 @@ function App() {
           </div>
           <div className='md:w-2/3 w-full p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
             <h2 className='text-xl font-bold text-gray-50 justify-item-center'>Top Destination Ports</h2>
-            <Heatmap data={heatmapDataDestPort} xKey="destPort" yKey="count" />
+            <Heatmap data={heatmapDataDestPort} xKey="destPort" yKey="count" valueX="Port number" valueY="Count"/>
           </div>
         </div>
       </div>
