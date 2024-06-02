@@ -95,33 +95,33 @@ function App() {
       <div className='container p-8'>
       <div className='flex mb-4 w-full flex-1 gap-2 '>
         <div className='w-1/3 p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
-      <h2 className='text-xl font-bold text-gray-50'>Pie chart</h2>
+      <h2 className='text-xl font-bold text-gray-50'>Distribution of Alert Severities</h2>
       <PieChartComponent data={pieChartData} />
       </div>
       <div className='w-2/3 p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
-      <h2 className='text-xl font-bold text-gray-50'>Heatmap source port</h2>
+      <h2 className='text-xl font-bold text-gray-50'>Top Source Ports</h2>
       <Heatmap data={heatmapDataSourcePort} xKey="sourcePort" yKey="count" />
       </div>
       </div>
 
       <div className='flex gap-2 w-full flex-1 mb-4'>
         <div className='w-2/3 p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
-        <h2 className='text-xl font-bold text-gray-50'>Histogram Dest ip</h2>
+        <h2 className='text-xl font-bold text-gray-50'>Top Destination IPs</h2>
       <HistogramComponent data={histogramDataSourceIP} dataKey="sourceIP" barKey="count" value="IP address" />
       </div>
       <div className='w-1/3 p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
-      <h2 className='text-xl font-bold text-gray-50 justify-item-center'>Histogram source ip</h2>
+      <h2 className='text-xl font-bold text-gray-50 justify-item-center'>Top Source IPs</h2>
       <HistogramComponent data={histogramDataDestIP} dataKey="destIP" barKey="count" value="IP address" />
       </div>
       </div>
 
       <div className='flex gap-2 w-full flex-1'>
         <div className='w-1/3 p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
-        <h2 className='text-xl font-bold text-gray-50'>Line chart</h2>
+        <h2 className='text-xl font-bold text-gray-50'>Alert Trend Over Time</h2>
       <LineChartComponent data={lineChartData} />
       </div>
       <div className='w-2/3 p-4 bg-gray-900 rounded-xl shadow shadow-gray-500'>
-      <h2 className='text-xl font-bold text-gray-50 justify-item-center'>Heatmap dest port</h2>
+      <h2 className='text-xl font-bold text-gray-50 justify-item-center'>Top Destination Ports</h2>
       <Heatmap data={heatmapDataDestPort} xKey="destPort" yKey="count" />
       </div>
       </div>
