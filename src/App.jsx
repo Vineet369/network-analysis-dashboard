@@ -53,16 +53,24 @@ const processData = (data) => {
       destPortCounts[entry.dest_port] = (destPortCounts[entry.dest_port] || 0) + 1;
     }
   });
-
+ 
   const histogramDataSourceIP = Object.keys(sourceIPCounts).map(key => ({
     sourceIP: key,
     count: sourceIPCounts[key],
-  }));
+  })).sort((a, b) => {
+    const aFirstOctet = parseInt(a.sourceIP.split('.')[0], 10);
+    const bFirstOctet = parseInt(b.sourceIP.split('.')[0], 10);
+    return bFirstOctet - aFirstOctet;
+  });
 
   const histogramDataDestIP = Object.keys(destIPCounts).map(key => ({
     destIP: key,
     count: destIPCounts[key],
-  }));
+  })).sort((a, b) => {
+    const aFirstOctet = parseInt(a.destIP.split('.')[0], 10);
+    const bFirstOctet = parseInt(b.destIP.split('.')[0], 10);
+    return bFirstOctet - aFirstOctet;
+  });
 
   const heatmapDataSourcePort = Object.keys(sourcePortCounts).map(key => ({
     sourcePort: key,
